@@ -4,8 +4,8 @@ const pokemon_img = document.querySelector('.pokemon_img');
 const form = document.querySelector('.form');
 const input = document.querySelector('.input_search')
 
-const btnNext = document.querySelector('.btn-prev')
-const btnPrev = document.querySelector('.btn-next')
+const btnNext = document.querySelector('.btn-next')
+const btnPrev = document.querySelector('.btn-prev')
 
 let searchPokemon = 1;
 
