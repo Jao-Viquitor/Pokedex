@@ -24,17 +24,17 @@ const renderPokemon = async (pokemon) => {
     pokemon_number.innerHTML = '';
     const data = await fetchPokemon(pokemon);
 
-    if (!data){
-        pokemon_img.style.diplay = 'none';
-        pokemon_name.innerHTML = "Não encontrado :(";
-        pokemon_number.innerHTML = '';
-    } else {
+    if (data){
         pokemon_img.style.diplay = 'block';
         pokemon_name.innerHTML = data.name;
         pokemon_number.innerHTML = data.id;
         pokemon_img.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
         input.value = '';
         searchPokemon = data.id;
+    } else {
+        pokemon_img.style.diplay = 'none';
+        pokemon_name.innerHTML = "Não encontrado :(";
+        pokemon_number.innerHTML = '';
     }
 
 }
